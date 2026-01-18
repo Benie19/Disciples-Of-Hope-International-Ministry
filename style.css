@@ -1,0 +1,312 @@
+/* ---------- CSS Variables ---------- */
+:root {
+  --primary: #6d5a7a; /* Lavender / Purple */
+  --secondary: #b24a6f; /* Wine / Deep Pink */
+  --dark: #1f1f1f; /* Text */
+  --light: #ffffff; /* Background */
+  --soft: #f2eef5; /* Light lavender background */
+  --hover-secondary: #8f3758; /* Hover color for buttons/links */
+}
+
+/* ---------- Global Styles ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--soft);
+  color: var(--dark);
+}
+
+ul {
+  margin-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+.layout-row {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.content-box {
+  flex: 1;
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  min-height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--primary), #9b8aad);
+  color: var(--light);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  max-width: 900px;
+}
+
+.motto {
+  font-size: 1.3rem;
+  max-width: 700px;
+}
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: var(--light);
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  border: 2px solid var(--light);
+  color: var(--light);
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.scroll-down {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* ---------- Sections ---------- */
+.section {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 4rem 6%;
+  background: var(--light);
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.section #contactParagraph {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.section:nth-child(even) {
+  background: var(--soft);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Two-column row */
+.layout-row {
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.content-box {
+  flex: 1;
+  background: var(--light);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-8px);
+}
+
+/* ---------- Grid & Cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* ---------- Curosel Images ---------- */
+.carousel-inner img,
+.carousel-inner video {
+  width: 100%; /* full width */
+  height: auto; /* maintain aspect ratio */
+  border-radius: 8px;
+}
+
+/* ---------- Images ---------- */
+.section img {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* ---------- Contact Info ---------- */
+#contactInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+/* ---------- Links & Buttons ---------- */
+.contact-links a,
+button {
+  background: var(--secondary);
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contact-links a:hover,
+button:hover {
+  background: var(--hover-secondary);
+}
+
+/* ---------- Responsive Styles ---------- */
+
+@media (min-width: 1024px) {
+  .carousel-inner video {
+    max-height: 400px; /* shrink video to reasonable height */
+  }
+
+  .carousel-inner img {
+    max-height: 400px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1023px) {
+  .carousel-inner video,
+  .carousel-inner img {
+    max-height: none; /* let it shrink naturally */
+  }
+}
+/* Tablets (≤ 900px) */
+@media (max-width: 900px) {
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .section {
+    padding: 2rem 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Phones (≤ 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .motto {
+    font-size: 1.1rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  ul {
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout-row {
+    flex-direction: column;
+  }
+}
