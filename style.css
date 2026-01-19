@@ -188,12 +188,37 @@ li {
   color: var(--primary);
 }
 
-/* ---------- Curosel Images ---------- */
+/* ---------- Carousel  ---------- */
 .carousel-inner img,
 .carousel-inner video {
   width: 100%; /* full width */
   height: auto; /* maintain aspect ratio */
   border-radius: 8px;
+}
+
+.carousel-map-container {
+  display: flex;
+  gap: 2rem; /* spacing between carousel and map */
+  flex-wrap: wrap; /* stacks on smaller screens */
+}
+
+.carousel-wrapper,
+.map-wrapper {
+  flex: 1;
+  min-width: 300px; /* prevents them from shrinking too small */
+}
+
+.carousel-wrapper img,
+.carousel-wrapper video {
+  width: 100%;
+  height: auto; /* ensures full content visible */
+  max-height: 450px; /* optional: keeps carousel from getting too tall */
+  border-radius: 12px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 450px; /* same height as carousel for alignment */
 }
 
 /* ---------- Images ---------- */
